@@ -7,4 +7,4 @@ Aluno e RA:
 200347	Matheus C. P. de Paschoa
 200767	Rafael Henrique Lavagnini
 
-Título do Porjeto: "uOn - Chamada automatizada"
+Título do Projeto: "uOn - Chamada automatizada"
