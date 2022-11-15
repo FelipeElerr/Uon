@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 100%;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #1d8989;
+	color: #ebf5f5;
+	padding: 20px;
+	font-family: 'Indie Flower', cursive;
+	font-family: 'Orbitron', sans-serif;
+}
+/* ------------------------------------------ */
+#cabecalho{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.titulo {
+	width: max-content;
+	font-size: 2.5em;
+}
+
+#iconeLista{
+	padding-top: 0.3em;
+	margin-left: 0.4em;
+	font-size: 3em;
+
+}
+/* ------------------------------------------ */
+.menu{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	position: absolute;
+	right:0;
+	width: max-content;
+	
+}
+
+#ra {
+	margin-right: 0.4em;
+	text-align: right;
+	font-size: 1.2em;
+}
+
+#iconeUsuario{
+	margin-top: 0.2em;
+	margin-right: 0.4em;
+	font-size: 2em;
+}
