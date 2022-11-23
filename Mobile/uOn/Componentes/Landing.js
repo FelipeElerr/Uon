@@ -6,10 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import Login from './Login'
 import Cadastro from './Cadastro'
+import Scanner from './Scanner';
 
 const Stack = createNativeStackNavigator();
 
-function uOn(props){
+function Uon(props){
   return (
     <View>
       <Button
@@ -35,8 +36,16 @@ export default function Menu() {
   return (
     <NavigationContainer independent={true}>
       <Stack.Navigator>
-				<Stack.Screen  name='uOn' component={uOn} options={{
-          title: 'uOn',
+        <Stack.Screen  name='Scanner' component={Scanner} options={{
+          title: 'Scanner',
+          headerStyle: {
+            backgroundColor: '#333',
+          },
+          headerTintColor: '#DDD',
+        }}/>
+
+				<Stack.Screen  name='Uon' component={Uon} options={{
+          title: 'Uon',
           headerStyle: {
             backgroundColor: '#333',
           },
