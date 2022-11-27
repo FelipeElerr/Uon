@@ -10,7 +10,9 @@ import Header from '../../../../componentes/Header/header'
 import Footer from '../../../../componentes/Footer/footer'
 import { Link } from "react-router-dom";
 
-export default function ConferenciaAlunos() {
+export default function NovaChamada() {
+	const [code, setCode] = React.useState("CP600TIN1");
+	const [dia, setDia] = React.useState("TER2100");
 
 	return (
 		<>
@@ -21,7 +23,7 @@ export default function ConferenciaAlunos() {
 						<p>Use a câmera do celular para ler o QR code e garantir sua presença na aula</p>
 					</section>
 					<section className="qrCode">
-						<QrCode />
+						<QrCode code={code} dia={dia} />
 					</section>
 					<section className="gerarQrCode">
 						<Link to="/alunos-presentes" className="link formatacao">Finalizar</Link>
@@ -29,9 +31,6 @@ export default function ConferenciaAlunos() {
 				</div>
 			</article>
 			<Footer />
-			
 		</>
-
-
 	)
 }

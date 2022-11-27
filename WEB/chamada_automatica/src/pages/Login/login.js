@@ -15,14 +15,9 @@ export default function Login() {
 	return (
 		<>
 			<div className="centro">
-
-				<section className="aluno">
-					<Link to="/alunos" className="link formatacao">Aluno</Link>
-				</section>
 				<section className="professor">
 					<Link to="/conferencia-alunos" className="link formatacao">Professor</Link>
 				</section>
-
 			</div>
 			<Footer />
 		</>
