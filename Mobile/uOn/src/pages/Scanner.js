@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Text, View, SafeAreaView, TouchableOpacity } from 'react-native'
 import tw from 'tailwind-react-native-classnames'
 import { BarCodeScanner } from 'expo-barcode-scanner'
 import { YellowBox } from 'react-native-web'
+
+import  { AuthContext } from '../contexts/auth'
 
 
 export default function Scanner() {
@@ -14,6 +16,8 @@ export default function Scanner() {
         [Y, setY] = useState(0),
         [width, setWidth] = useState(0),
         [height, setHeight] = useState(0)
+
+    const {setHash} = useContext(AuthContext)
         
 
     useEffect(() => {
@@ -31,7 +35,7 @@ export default function Scanner() {
         setY(origin.y)
         setHeight(size.height)
         setWidth(size.width)
-        console.log(data)
+        setHash(data)
     }
 
     if (hasPermission === null || hasPermission == false) {

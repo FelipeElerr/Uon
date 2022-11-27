@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { View, Text, FlatList, TextInput, Button, DrawerLayoutAndroidBase } from 'react-native'
+import Chamada from '../firebase/chamada';
 
 export default function Login(
 	//{ navigation: { navigate } }
@@ -33,6 +34,8 @@ export default function Login(
 					}
 				}
 			/>
+
+			<Chamada/>
 		</View>
 	)
 }
