@@ -11,10 +11,11 @@ export default function QrCode(){
     const [hash, setHash] = React.useState(); 
 
     const funcaoAssync = async () => {
-      const resultado = await fetch(code);
+      const resultado = await fetch("https://api.hashify.net/hash/md4/hex?value=" + code);
       const json = await resultado.json();
   
-      setHash(json.Digest)
+      setHash(json['Digest'])
+      console.log(json)
       };
     React.useEffect(() => { funcaoAssync(); }, []);
     return(
