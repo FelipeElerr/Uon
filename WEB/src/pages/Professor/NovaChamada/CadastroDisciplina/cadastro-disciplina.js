@@ -13,7 +13,7 @@ export default function CadastroDisciplina() {
 	const codigoRef = useRef('');
 	const horarioRef = useRef('');
 	const [horario, setHorario] = useState()
-	const hash = useRef('200333')
+	const [hash, setHash] = useState('200333')
 	const collecRef = collection(db, "Disciplina")
 
 	const Cadastrar = async(e) =>{
@@ -40,7 +40,6 @@ export default function CadastroDisciplina() {
 	const criarNovaAula = async () => {
 		//console.log('Disciplina', props.code, 'Chamada', props.dia)
 		setDoc(doc(db, 'Disciplina', String(codigoRef.current.value), 'Chamada', String(horario)), {
-		  [codigoAulaHoje()]: [hash],
 		})
 	  };
 
