@@ -1,0 +1,105 @@
+.opcaoChamada {
+    display: flex;
+    flex-direction: row;
+}
+/* ------------------------------------------------------ */
+.novaChamada {
+    margin-top:0.5em;
+    margin-left: 2em;
+}
+.historicoChamada{
+    margin-top:0.5em;
+    margin-left: 2em;
+    
+}
+/* ------------------------------------------------------ */
+.telaListaAlunos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#checkbox{
+    margin-right: 1.5em;
+}
+/* ------------------------------------------------------ */
+.sala{
+    position: absolute;
+    top: 10em;
+    left:10em;
+}
+.listaAlunos{
+    position: absolute;
+    left: 40em;
+    top: 11em;
+}
+
+.input{
+    position: absolute;
+    left: 12em;
+}
+
+.label{
+    position: absolute;
+    bottom: 5em;
+}
+
+.label1{
+    position: absolute;
+    bottom: 3.1em;
+}
+
+.label2{
+    
+}
+
+.buttonSubmit{
+    
+}
+
+
+ 
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin-top:0.5em;
+}
+
+.gerarQrCode {
+    position: absolute;
+    right: 8em;
+    bottom: 13em;
+}
+
+.calcular {
+    position: absolute;
+    right: 12em;
+    bottom: 13em;
+}
+
+.CadastrarDisiciplina{
+    position: absolute;
+    right: 8em;
+    bottom: 16em;
+}
+
+
+
+.Link {
+    text-decoration: none;
+    background-color: #c9eded;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+
+/* ------------------------------------------------------ */
+#formatacao{
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}

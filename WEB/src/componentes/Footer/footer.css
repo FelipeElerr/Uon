@@ -1,0 +1,20 @@
+footer {
+	width: 100%;
+	padding: 1em;
+	position: absolute;
+	bottom: 0;
+	background-color: #1d8989;
+	color: #ebf5f5;
+	text-align: center;
+}
+
+.descricao {
+	text-align: justify;
+	margin: 1em;
+}
+
+#tituloFooter{
+	font-family: 'Indie Flower', cursive;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 1.3em;
+}
