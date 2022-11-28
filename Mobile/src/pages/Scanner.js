@@ -3,7 +3,7 @@ import { Text, View, SafeAreaView, TouchableOpacity } from 'react-native'
 import tw from 'tailwind-react-native-classnames'
 import { BarCodeScanner } from 'expo-barcode-scanner'
 import { YellowBox } from 'react-native-web'
-
+import Chamada from '../firebase/chamada'
 import  { AuthContext } from '../contexts/auth'
 
 
@@ -79,6 +79,8 @@ export default function Scanner() {
                     </View>
 
                 </BarCodeScanner>
+
+                <Chamada/>
             </View>
         </SafeAreaView>
 
