@@ -16,24 +16,6 @@ export default function Routes() {
 
     <Stack.Navigator>
 
-      <Stack.Screen name='Landing' component={Landing} options={{
-        title: 'Landing',
-        headerStyle: {
-          backgroundColor: '#333',
-        },
-        headerTintColor: '#DDD',
-      }} />
-
-      <Stack.Screen name='Scanner' component={Scanner} options={{
-        title: 'Scanner',
-        headerStyle: {
-          backgroundColor: '#333',
-        },
-        headerTintColor: '#DDD',
-      }} />
-
-
-
       <Stack.Screen name='Login' component={Login} options={{
         title: 'Login',
         headerStyle: {
@@ -58,7 +40,13 @@ export default function Routes() {
         headerTintColor: '#DDD',
       }} />
 
-
+      <Stack.Screen name='Scanner' component={Scanner} options={{
+        title: 'Scanner',
+        headerStyle: {
+          backgroundColor: '#333',
+        },
+        headerTintColor: '#DDD',
+      }} />
 
     </Stack.Navigator>
 

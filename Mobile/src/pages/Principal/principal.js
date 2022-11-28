@@ -4,6 +4,7 @@ import Cabecalho from '../../componentes/Cabecalho';
 import Materia from '../../componentes/Materias';
 import estilos from './estilos';
 import { auth } from '../../config/firebase';
+import Botao from '../../componentes/Botao';
 
 export default function Principal({ navigation }) {
   const usuario = auth.currentUser;
@@ -17,6 +18,11 @@ export default function Principal({ navigation }) {
       <Materia nome="UPX" professor="Germano" />
       <Materia nome="Redes" professor="Jones" />
       <Materia nome="Eletrônica" professor="Alessandro" />
+      <Botao 
+        onPress={() => { navigation.navigate('Scanner') }}
+      >
+        Scannear QrCode
+      </Botao>
      </View>
   );
 }
