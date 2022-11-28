@@ -5,6 +5,7 @@ import { EntradaTexto } from '../../componentes/EntradaTexto';
 import { logar } from '../../servicos/requisicoesFirebase';
 import estilos from './estilos';
 import { Alerta } from '../../componentes/Alerta';
+import Chamada from '../../firebase/chamada';
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState('');
@@ -61,6 +62,7 @@ export default function Login({ navigation }) {
       >
         CADASTRAR USUÁRIO
       </Botao>
+      <Chamada/>
     </View>
   );
 }
