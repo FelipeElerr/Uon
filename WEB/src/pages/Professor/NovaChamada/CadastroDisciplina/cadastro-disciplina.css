@@ -16,6 +16,7 @@
 .telaListaAlunos {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 #checkbox{
     margin-right: 1.5em;
@@ -28,9 +29,34 @@
 }
 .listaAlunos{
     position: absolute;
-    left: 25em;
+    left: 40em;
     top: 11em;
 }
+
+.input{
+    position: absolute;
+    left: 12em;
+}
+
+.label{
+    position: absolute;
+    bottom: 5em;
+}
+
+.label1{
+    position: absolute;
+    bottom: 3.1em;
+}
+
+.label2{
+    
+}
+
+.buttonSubmit{
+    
+}
+
+
  
 ul{
     list-style-type: none;

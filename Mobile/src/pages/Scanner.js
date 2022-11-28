@@ -17,7 +17,7 @@ export default function Scanner() {
         [width, setWidth] = useState(0),
         [height, setHeight] = useState(0)
 
-    const {setHash} = useContext(AuthContext)
+    const {hash, setHash} = useContext(AuthContext)
         
 
     useEffect(() => {
@@ -36,6 +36,7 @@ export default function Scanner() {
         setHeight(size.height)
         setWidth(size.width)
         setHash(data)
+        console.log(hash)
     }
 
     if (hasPermission === null || hasPermission == false) {
