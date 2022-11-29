@@ -5,7 +5,7 @@ export default StyleSheet.create({
     height: 40,
     width: "100%",
     borderRadius: 5,
-    backgroundColor: "#1E8187",
+    backgroundColor: "transparent",
     justifyContent: "center",
     alignItems: "center",
     marginTop: 20,
@@ -13,6 +13,7 @@ export default StyleSheet.create({
   textoBotao: {
     fontSize: 15,
     fontWeight: "700",
-    color: "#fff",
+    color: "#333",
+    fontFamily: 'DeliusSwashCaps-Regular'
   }
 });

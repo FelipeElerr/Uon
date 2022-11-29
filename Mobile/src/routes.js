@@ -19,25 +19,28 @@ export default function Routes() {
       <Stack.Screen name='Login' component={Login} options={{
         title: 'Login',
         headerStyle: {
-          backgroundColor: '#333',
+          backgroundColor: 'white',
         },
-        headerTintColor: '#DDD',
+        headerTintColor: '#333',
+        headerTitleAlign:'center'
       }} />
 
       <Stack.Screen name='Cadastro' component={Cadastro} options={{
         title: 'Cadastro',
         headerStyle: {
-          backgroundColor: '#333',
+          backgroundColor: 'white',
         },
-        headerTintColor: '#DDD',
+        headerTintColor: '#333',
+        headerTitleAlign:'center'
       }} />
 
       <Stack.Screen name='Principal' component={Principal} options={{
         title: 'Principal',
         headerStyle: {
-          backgroundColor: '#333',
+          backgroundColor: 'white',
         },
-        headerTintColor: '#DDD',
+        headerTintColor: '#333',
+        headerTitleAlign:'center'
       }} />
 
       <Stack.Screen name='Scanner' component={Scanner} options={{
@@ -46,6 +49,7 @@ export default function Routes() {
           backgroundColor: '#333',
         },
         headerTintColor: '#DDD',
+        headerTitleAlign:'center'
       }} />
 
     </Stack.Navigator>

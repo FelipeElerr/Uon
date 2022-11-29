@@ -13,4 +13,8 @@ export default StyleSheet.create({
     marginLeft: 10,
     marginBottom: 20,
   },
+  textobotao: {
+    color: '#333'
+  }
+  
 });

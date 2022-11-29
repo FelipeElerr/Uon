@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Alert, View, SegmentedControlIOS } from 'react-native';
+import { Alert, View, SegmentedControlIOS, Text, TouchableOpacity } from 'react-native';
 import Botao from '../../componentes/Botao';
 import { EntradaTexto } from '../../componentes/EntradaTexto';
 import estilos from './estilos';
@@ -8,6 +8,7 @@ import { Alerta } from '../../componentes/Alerta';
 import { collection, getDocs, setDoc, doc } from 'firebase/firestore';
 import db from '../../config/firebase';
 import getLastDocument from '../../servicos/GetLastDocument';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Cadastro() {  
   const [nome, setNome] = useState("");
@@ -60,6 +61,8 @@ export default function Cadastro() {
 
   return (
     <View style={estilos.container}>
+       <LinearGradient colors={['white','#1D8989']}
+      style={estilos.background}/>
       <EntradaTexto 
         label="Nome"
         value={nome}
@@ -107,7 +110,9 @@ export default function Cadastro() {
         setError={setStatusError}
       />
       
-      <Botao onPress={() => realizarCadastro()}>CADASTRAR</Botao>
+      <TouchableOpacity 
+      style={estilos.botao}
+      onPress={() => realizarCadastro()}><Text style={estilos.textoBotao}>CADASTRAR</Text></TouchableOpacity>
     </View>
   );
 }

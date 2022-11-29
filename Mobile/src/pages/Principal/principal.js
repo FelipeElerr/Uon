@@ -6,19 +6,21 @@ import estilos from './estilos';
 import { auth } from '../../config/firebase';
 import Botao from '../../componentes/Botao';
 
+
 export default function Principal({ navigation }) {
   const usuario = auth.currentUser;
 
   return (
     <View style={estilos.container}>
+      
       <Cabecalho navigation={navigation} />
       <Text style={estilos.texto}>Usuário: {usuario.email}</Text>
-
       <Materia nome="DevMobile" professor="Renato" />
       <Materia nome="UPX" professor="Germano" />
       <Materia nome="Redes" professor="Jones" />
       <Materia nome="Eletrônica" professor="Alessandro" />
-      <Botao 
+      <Botao
+      style={estilos.textobotao}
         onPress={() => { navigation.navigate('Scanner') }}
       >
         Scannear QrCode
