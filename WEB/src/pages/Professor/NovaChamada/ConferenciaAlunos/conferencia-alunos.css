@@ -64,8 +64,12 @@ li{
     text-decoration: none;
     background-color: #c9eded;
     padding: 5px;
-    border-radius: 10px;
-    
+    border-radius: 5px;
+}
+
+#Link {
+    width: 180px;
+    height: 30px;
 }
 
 /* ------------------------------------------------------ */

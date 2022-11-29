@@ -85,7 +85,7 @@ export function Register() {
         </button>
         <br />
         <div className="footer">
-          <Link id="Link" className="Link" to="/">Voltar para tela de login</Link>
+          <Link id="Link-botao" className="Link-botao" to="/">Voltar para tela de login</Link>
         </div>
       </form>
     </div>

@@ -34,10 +34,10 @@ export default function ConferenciaAlunos() {
 				</section>
 
 				<section className="gerarQrCode">
-					<Link to="/nova-chamada" className="Link" id="formatacao">Gerar QrCode</Link>
+					<Link to="/nova-chamada" className="Link" id="Link">Gerar QrCode</Link>
 				</section>
 				<section className="CadastrarDisiciplina">
-					<Link to="/cadastro-disciplina" className="Link" id="formatacao">Cadastrar Disciplina</Link>
+					<Link to="/cadastro-disciplina" className="Link" id="Link">Cadastrar Disciplina</Link>
 				</section>
 
 			</article>

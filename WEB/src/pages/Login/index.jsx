@@ -1,28 +1,31 @@
-import { useState } from "react";
+import { getAuth, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import { useState, useEffect } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
 import logoImg from "../../assets/uOn_logo.jpeg";
 import { auth } from "../../services/firebaseConfig";
 import "./styles.css";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   function handleSignIn(e) {
     e.preventDefault();
-    signInWithEmailAndPassword(email, password);
+    signInWithEmailAndPassword( email, password)
   }
 
-  if (loading) {
-    return <p>carregando...</p>;
-  }
-  if (user) {
-    return console.log(user);
-  }
+  useEffect(() => {
+    if (loading) {
+
+      return;
+    }
+    if (user) navigate("/conferencia-alunos");
+  }, [user, loading]);
   return (
     <div className="container">
       <header className="header">
@@ -58,7 +61,7 @@ export function Login() {
         </button>
         <br />
         <div>
-          <Link id="Link" className="Link" to="/register">Cadastro de usuário</Link>
+          <Link id="Link-botao" className="Link-botao" to="/register">Cadastro de usuário</Link>
         </div>
       </form>
     </div>
