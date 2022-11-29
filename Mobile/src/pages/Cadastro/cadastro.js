@@ -49,7 +49,7 @@ export default function Cadastro() {
     }
   }
 
-  const CadastroAluno = async (valorId) =>{
+  const CadastroAluno = async () =>{
     let ultimo = await getLastDocument('Aluno')
     setDoc(doc(db, 'Aluno', String(parseInt(ra))),{
       nome: nome,
