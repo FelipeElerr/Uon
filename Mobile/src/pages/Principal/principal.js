@@ -13,14 +13,13 @@ export default function Principal({ navigation }) {
   return (
     <View style={estilos.container}>
       
-      <Cabecalho navigation={navigation} />
+     {/* <Cabecalho navigation={navigation} /> */}
       <Text style={estilos.texto}>Usuário: {usuario.email}</Text>
       <Materia nome="DevMobile" professor="Renato" />
       <Materia nome="UPX" professor="Germano" />
       <Materia nome="Redes" professor="Jones" />
       <Materia nome="Eletrônica" professor="Alessandro" />
       <Botao
-      style={estilos.textobotao}
         onPress={() => { navigation.navigate('Scanner') }}
       >
         Scannear QrCode

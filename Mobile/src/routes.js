@@ -8,6 +8,7 @@ import Cadastro from './pages/Cadastro/cadastro'
 import Principal from './pages/Principal/principal'
 import Scanner from './pages/Scanner'
 import Landing from './pages/Landing'
+import ActionBarImage from './ActionBarImage';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,7 +23,8 @@ export default function Routes() {
           backgroundColor: 'white',
         },
         headerTintColor: '#333',
-        headerTitleAlign:'center'
+        headerTitleAlign:'center',
+        headerTitle: () => <ActionBarImage />,
       }} />
 
       <Stack.Screen name='Cadastro' component={Cadastro} options={{
@@ -31,7 +33,8 @@ export default function Routes() {
           backgroundColor: 'white',
         },
         headerTintColor: '#333',
-        headerTitleAlign:'center'
+        headerTitleAlign:'center',
+        headerTitle: () => <ActionBarImage />,
       }} />
 
       <Stack.Screen name='Principal' component={Principal} options={{
@@ -40,7 +43,8 @@ export default function Routes() {
           backgroundColor: 'white',
         },
         headerTintColor: '#333',
-        headerTitleAlign:'center'
+        headerTitleAlign:'center',
+        headerTitle: () => <ActionBarImage />,
       }} />
 
       <Stack.Screen name='Scanner' component={Scanner} options={{
@@ -48,8 +52,9 @@ export default function Routes() {
         headerStyle: {
           backgroundColor: '#333',
         },
-        headerTintColor: '#DDD',
-        headerTitleAlign:'center'
+        headerTintColor: '#333',
+        headerTitleAlign:'center',
+        headerTitle: () => <ActionBarImage />,
       }} />
 
     </Stack.Navigator>
