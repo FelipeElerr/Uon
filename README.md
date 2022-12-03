@@ -1,15 +1,15 @@
 # _uOn_
 ### _Chamada Otimizada_
 
-| Aluno | RA |
-| ------ | ------ |
-| Alex Shoiti Hashida Guerra | 200831 |
-| Felipe Eler de Oliveira Machado | 200738 |
-| Felipe Victorino Sarubo | 200574 |
-| Gabriel M. Mancio de Camargo | 200333 |
-| Laura C. F. Soares da Silva | 200343 |
-| Matheus C. P. de Paschoa | 200347 |
-| Rafael Henrique Lavagnini | 200767 |
+| Aluno | RA | Disciplina |
+| ------ | ------ | ------ |
+| Alex Shoiti Hashida Guerra | 200831 | CP600TIN1 |
+| Felipe Eler de Oliveira Machado | 200738 | CP600TIN1 |
+| Felipe Victorino Sarubo | 200574 | CP600TIN1 |
+| Gabriel M. Mancio de Camargo | 200333 | CP600TIN2 |
+| Laura C. F. Soares da Silva | 200343 | CP600TIN2 |
+| Matheus C. P. de Paschoa | 200347 | CP600TIN1 |
+| Rafael Henrique Lavagnini | 200767 | CP600TIN1 |
 
 ### Features
 #### Web
