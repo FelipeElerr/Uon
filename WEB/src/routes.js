@@ -9,16 +9,17 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AlunosPresentes from "./pages/Professor/NovaChamada/AlunosPresentes/alunos-presentes";
 import NovaChamada from "./pages/Professor/NovaChamada/QrCode/nova-chamada";
-import Login from "./pages/Login/login"
 import ConferenciaAlunos from "./pages/Professor/NovaChamada/ConferenciaAlunos/conferencia-alunos"
 import CadastroDisciplina from "./pages/Professor/NovaChamada/CadastroDisciplina/cadastro-disciplina"
-
+import { Login } from "./pages/Login";
+import { Register } from "./pages/Register";
 
 function Router() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<ConferenciaAlunos/>} />
+				<Route path="/" element={<Login />} />
+        		<Route path="/register" element={<Register />} />
 				<Route path="/nova-chamada" element={<NovaChamada />} />
 				<Route path="/alunos-presentes" element={<AlunosPresentes/>} />
 				<Route path="/conferencia-alunos" element={<ConferenciaAlunos/>} />
