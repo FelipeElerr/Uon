@@ -5,7 +5,6 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 25,
     paddingHorizontal: 20,
   },
   background: {
@@ -13,6 +12,7 @@ export default StyleSheet.create({
     left: 0,
     right: 0,
     top: 0,
+    bottom: 0,
     height: '100%'
   },
   botao: {
@@ -28,6 +28,5 @@ export default StyleSheet.create({
     fontSize: 15,
     fontWeight: "700",
     color: "#fff",
-    fontFamily: 'Arial'
   }
 });

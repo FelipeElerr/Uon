@@ -9,7 +9,7 @@ export default function Cabecalho({ navigation }) {
       <LinearGradient colors={['white','#6cbdc3']} style={estilos.background}/>
        <TouchableOpacity style={estilos.botao}
       start={{x: 0, y: 0}}
-      end={{x: 10, y: 0}}  onPress={() => navigation.replace('Login')}>
+      end={{x: 1, y: 0}}  onPress={() => navigation.replace('Login')}>
         <Icon 
           name={'log-out'} 
           size={20} 

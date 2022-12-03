@@ -28,6 +28,5 @@ export default StyleSheet.create({
     fontSize: 15,
     fontWeight: "700",
     color: "#fff",
-    fontFamily: 'Arial'
   }
 });

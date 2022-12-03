@@ -12,7 +12,7 @@ import Cabecalho from './componentes/Cabecalho/cabecalho';
 
 const Stack = createNativeStackNavigator();
 
-export default function Routes() {
+export default function Routes({ navigation }) {
   return (
     
     <Stack.Navigator>
