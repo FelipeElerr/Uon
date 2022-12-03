@@ -15,6 +15,7 @@ export default function Scanner() {
 
     const [vetor, setVetor] = useState([])
     const { hash, setHash } = useContext(AuthContext)
+    const { raBanco, setRaBanco } = useContext(AuthContext)
     const vetorAula = []
 
     const [hasPermission, setHasPermission] = useState(null),
@@ -72,7 +73,7 @@ export default function Scanner() {
                 if (Chamada.dados[aula][0] === hash) {
                     console.log(Chamada.dia, disciplina, aula)
                     vetorAula.push(Chamada.dados[aula])
-                    vetorAula[0].push("200000")
+                    vetorAula[0].push("200767")
                     console.log("Vetor aula: ", vetorAula)
                     pushRA(disciplina, Chamada.dia, aula)
                 }

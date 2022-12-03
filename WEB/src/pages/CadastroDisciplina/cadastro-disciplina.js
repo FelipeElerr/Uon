@@ -1,11 +1,12 @@
 import React, {useRef, useState} from "react";
-import Header from "../../../../componentes/Header/header";
-import Footer from "../../../../componentes/Footer/footer";
+import Header from "../../componentes/Header/header";
+import Footer from "../../componentes/Footer/footer";
 import { Link } from "react-router-dom";
 import './cadastro-disciplina.css';
-import db from "../../../../firebase";
-import {addDoc, setDoc, collection, doc, updateDoc} from "@firebase/firestore";
+import db from "../../firebase";
+import { addDoc, setDoc, collection, doc, updateDoc } from "@firebase/firestore";
 import Combobox from "react-widgets/Combobox";
+import  { AuthContext } from '../../contexts/auth'
 
 
 export default function CadastroDisciplina() {
@@ -15,17 +16,20 @@ export default function CadastroDisciplina() {
 	const [horario, setHorario] = useState()
 	const [hash, setHash] = useState('200333')
 	const collecRef = collection(db, "Disciplina")
+	const {professorId, setProfessorId} = useContext(AuthContext)
 
 	const Cadastrar = async(e) =>{
 		e.preventDefault();
 		console.log(nomeRef.current.value);
 		console.log(codigoRef.current.value);
+		console.log(professorId)
 
-		console.log(horarioRef.current.value);
+		
 
 		let data= {
 			codigo: String(codigoRef.current.value),
-			nome: String(nomeRef.current.value)
+			nome: String(nomeRef.current.value),
+			professor: professorId
 		};
 
 		try{

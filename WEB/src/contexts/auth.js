@@ -4,11 +4,10 @@ export const AuthContext = createContext({})
 
 function AuthProvider({children}){
     
-    const [hash, setHash] = useState("9d0d496d7a75a37c7b3706dc0ee6ab7c")
-    const [raBanco, setRaBanco] = useState("200767")
+    const [professorId, setProfessorId] = useState("1")
 
     return(
-        <AuthContext.Provider value = {{nome:"Felipe", hash, setHash}}>
+        <AuthContext.Provider value = {{professorId, setProfessorId}}>
             {children}
         </AuthContext.Provider>
 
