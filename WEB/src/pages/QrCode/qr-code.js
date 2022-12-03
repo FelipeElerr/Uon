@@ -8,7 +8,7 @@ import db from '../../config'
 import { collection, getDocs, updateDoc, doc } from 'firebase/firestore'
 
 export default function QrCode(props){
-  const [hash, setHash] = useState();
+  const [hash, setHash] = useState('9d0d496d7a75a37c7b3706dc0ee6ab7c');
 
   useEffect(
     () => { 
