@@ -50,7 +50,7 @@ export function Login() {
 
       return;
     }
-    if (user) navigate("/conferencia-alunos");
+    if (user) navigate("/listar-disciplinas");
   }, [user, loading]);
   return (
     <div className="container">
