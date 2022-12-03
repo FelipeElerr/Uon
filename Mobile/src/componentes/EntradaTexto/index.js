@@ -14,7 +14,7 @@ export function EntradaTexto({ label, value, onChangeText, secureTextEntry, erro
         secureTextEntry={secureMode}
         onChangeText={onChangeText}
         style={estilos.input}
-        mode="outlined"
+        underlineColor='white'
         activeOutlineColor='#1E8187'
         right={
           secureTextEntry ?
