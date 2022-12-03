@@ -9,7 +9,7 @@ const ActionBarImage = () => {
   return (
     <View style={{ flexDirection: 'row' }}>
       <Image
-        source={require("../assets/UON.ico")}
+        source={require("../assets/UON.jpeg")}
         style={{
           width: 100,
           height: 50,

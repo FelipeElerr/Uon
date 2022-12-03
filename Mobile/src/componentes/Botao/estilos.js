@@ -14,6 +14,6 @@ export default StyleSheet.create({
     fontSize: 15,
     fontWeight: "700",
     color: "#333",
-    fontFamily: 'DeliusSwashCaps-Regular'
+    fontFamily: 'Arial'
   }
 });

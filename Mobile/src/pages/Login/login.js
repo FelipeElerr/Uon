@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TouchableOpacity ,Text} from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import Botao from '../../componentes/Botao';
 import { EntradaTexto } from '../../componentes/EntradaTexto';
 import { logar } from '../../servicos/requisicoesFirebase';
@@ -13,19 +13,19 @@ export default function Login({ navigation }) {
   const [statusError, setStatusError] = useState('');
   const [mensagemError, setMensagemError] = useState('');
 
-  async function realizarLogin(){
-    if(email == ''){
+  async function realizarLogin() {
+    if (email == '') {
       setMensagemError('O email é obrigatório!');
       setStatusError('email');
-    } else if(senha == ''){
+    } else if (senha == '') {
       setMensagemError('A senha é obrigatória!');
       setStatusError('senha');
     } else {
       const resultado = await logar(email, senha);
-      if(resultado == 'erro'){
+      if (resultado == 'erro') {
         setStatusError('firebase')
         setMensagemError('Email ou senha não conferem')
-      } 
+      }
       else {
         navigation.navigate('Principal')
       }
@@ -34,9 +34,9 @@ export default function Login({ navigation }) {
 
   return (
     <View style={estilos.container}>
-      <LinearGradient colors={['white','#1D8989']}
-      style={estilos.background}/>
-      <EntradaTexto 
+      <LinearGradient colors={['white', '#1D8989']}
+        style={estilos.background} />
+      <EntradaTexto
         label="E-mail"
         value={email}
         onChangeText={texto => setEmail(texto)}
@@ -52,18 +52,22 @@ export default function Login({ navigation }) {
         messageError={mensagemError}
       />
 
-      <Alerta 
+      <Alerta
         mensagem={mensagemError}
         error={statusError == 'firebase'}
         setError={setStatusError}
       />
-      
-      <TouchableOpacity 
-      style={estilos.botao}
-      onPress={() => realizarLogin()}><Text style={estilos.textoBotao}>LOGAR</Text></TouchableOpacity>
-      <TouchableOpacity 
-      style={estilos.botao}
-      onPress={() => { navigation.navigate('Cadastro') }}> <Text style={estilos.textoBotao}>CADASTRAR USUÁRIO</Text></TouchableOpacity>
+
+      <TouchableOpacity
+        style={estilos.botao}
+        onPress={() => realizarLogin()}>
+        <Text>LOGAR</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={estilos.botao}
+        onPress={() => { navigation.navigate('Cadastro') }}> 
+        <Text>CADASTRAR USUÁRIO</Text>
+      </TouchableOpacity>
     </View>
   );
 }
