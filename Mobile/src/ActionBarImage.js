@@ -11,7 +11,7 @@ const ActionBarImage = () => {
       <Image
         source={require("../assets/UON.ico")}
         style={{
-          width: 90,
+          width: 100,
           height: 50,
           borderRadius: 40 / 2,
           marginLeft: 15,
