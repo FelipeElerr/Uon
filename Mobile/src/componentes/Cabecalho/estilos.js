@@ -2,9 +2,9 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    height: 60,
+    height: '100%',
     width: "100%",
-    backgroundColor: "#1E8187",
+    backgroundColor: "#6cbdc3",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -17,5 +17,13 @@ export default StyleSheet.create({
   botao: {
     position: "absolute",
     right: 20,
+    bottom: 20,
   },
+  background: {
+    position:'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    height: '100%',
+  }
 });
