@@ -1,10 +1,10 @@
 import React, {useRef, useState} from "react";
-import Header from "../../../../componentes/Header/header";
-import Footer from "../../../../componentes/Footer/footer";
+import Header from "../../componentes/Header/header";
+import Footer from "../../componentes/Footer/footer";
 import { Link } from "react-router-dom";
 import './cadastro-disciplina.css';
-import db from "../../../../firebase";
-import {addDoc, setDoc, collection, doc, updateDoc} from "@firebase/firestore";
+import db from "../../firebase";
+import { addDoc, setDoc, collection, doc, updateDoc } from "@firebase/firestore";
 import Combobox from "react-widgets/Combobox";
 
 

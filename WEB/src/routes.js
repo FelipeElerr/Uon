@@ -7,21 +7,20 @@ E assim cada uma das paginas é acessada por meio de links atribuidos aos botõe
 
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AlunosPresentes from "./pages/Professor/NovaChamada/AlunosPresentes/alunos-presentes";
-import NovaChamada from "./pages/Professor/NovaChamada/QrCode/nova-chamada";
+import AlunosPresentes from "./pages/AlunosPresentes/alunos-presentes";
+import NovaChamada from "./pages/QrCode/nova-chamada";
 import Login from "./pages/Login/login"
-import ConferenciaAlunos from "./pages/Professor/NovaChamada/ConferenciaAlunos/conferencia-alunos"
-import CadastroDisciplina from "./pages/Professor/NovaChamada/CadastroDisciplina/cadastro-disciplina"
+import ListarDisciplinas from "./pages/ListarDisciplinas/listar-disciplinas"
+import CadastroDisciplina from "./pages/CadastroDisciplina/cadastro-disciplina"
 
 
 function Router() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<ConferenciaAlunos/>} />
+				<Route path="/" element={<ListarDisciplinas/>} />
 				<Route path="/nova-chamada" element={<NovaChamada />} />
 				<Route path="/alunos-presentes" element={<AlunosPresentes/>} />
-				<Route path="/conferencia-alunos" element={<ConferenciaAlunos/>} />
 				<Route path="/cadastro-disciplina" element={<CadastroDisciplina/>} />
 			</Routes>
 		</BrowserRouter>
