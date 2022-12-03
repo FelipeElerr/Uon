@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import Cabecalho from '../../componentes/Cabecalho';
+import Cabecalho from '../../componentes/Cabecalho/cabecalho';
 import Materia from '../../componentes/Materias';
 import estilos from './estilos';
 import { auth } from '../../config/firebase';

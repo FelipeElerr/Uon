@@ -8,7 +8,7 @@ import Principal from './pages/Principal/principal'
 import Scanner from './pages/Scanner'
 import Landing from './pages/Landing'
 import ActionBarImage from './ActionBarImage';
-import Cabecalho from './componentes/Cabecalho';
+import Cabecalho from './componentes/Cabecalho/cabecalho';
 
 const Stack = createNativeStackNavigator();
 
