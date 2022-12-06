@@ -46,7 +46,7 @@ export default function Scanner() {
         setWidth(size.width)
         setQrcode(data)
         getDisciplina()
-        console.log(codigo)
+        console.log(codigo.hash)
     }
 
     if (hasPermission === null || hasPermission == false) {
@@ -70,7 +70,7 @@ export default function Scanner() {
                 dados: item.data()
             }
             for (const aula in Chamada.dados) {
-                if (Chamada.dados[aula][0] === codigo) {
+                if (Chamada.dados[aula][0] === codigo.hash) {
                     console.log(Chamada.dia, disciplina, aula)
                     vetorAula.push(Chamada.dados[aula])
                     vetorAula[0].push(user.ra)

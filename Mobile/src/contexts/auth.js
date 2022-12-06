@@ -18,7 +18,7 @@ function AuthProvider({children}){
     }
     
     return(
-        <AuthContext.Provider value = {{nome:"Felipe", user, cadastro, codigo, setCodigo}}>
+        <AuthContext.Provider value = {{nome:"Felipe", user, cadastro, codigo, setQrcode}}>
             {children}
         </AuthContext.Provider>
 
