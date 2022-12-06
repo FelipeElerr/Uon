@@ -71,10 +71,11 @@ export default function Scanner() {
             }
             for (const aula in Chamada.dados) {
                 if (Chamada.dados[aula][0] === codigo.hash) {
-                    console.log(Chamada.dia, disciplina, aula)
+                    // console.log(Chamada.dia, disciplina, aula)
                     vetorAula.push(Chamada.dados[aula])
                     vetorAula[0].push(user.ra)
-                    console.log("Vetor aula: ", vetorAula)
+                    console.log(user.ra)
+                    // console.log("Vetor aula: ", vetorAula)
                     pushRA(disciplina, Chamada.dia, aula)
                 }
             }

@@ -23,7 +23,6 @@ export default function Principal({ navigation }) {
       <Materia nome="Eletrônica" professor="Alessandro" />
       <Botao
         onPress={() => { 
-          cadastro('200738')
           navigation.navigate('Scanner')
          }}
       >
