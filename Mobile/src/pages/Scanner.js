@@ -75,7 +75,7 @@ export default function Scanner() {
                     vetorAula.push(Chamada.dados[aula])
                     vetorAula[0].push(user.ra)
                     console.log(user.ra)
-                    // console.log("Vetor aula: ", vetorAula)
+                    console.log("Vetor aula: ", vetorAula)
                     pushRA(disciplina, Chamada.dia, aula)
                 }
             }
