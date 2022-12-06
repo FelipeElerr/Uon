@@ -7,6 +7,8 @@ import estilos from './estilos';
 import { Alerta } from '../../componentes/Alerta';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AuthContext } from '../../contexts/auth'
+import { collection, getDocs, setDoc, doc } from 'firebase/firestore'
+import db from '../../config/firebase'
 
 
 export default function Login({ navigation }) {
@@ -24,22 +26,34 @@ export default function Login({ navigation }) {
     } else if (senha == '') {
       setMensagemError('A senha é obrigatória!');
       setStatusError('senha');
-    } else if (ra == '') {
-      setMensagemError('O RA é obrigatório!');
-      setStatusError('ra');
-    }else {
+    } 
+    //else if (ra == '') {
+    //   setMensagemError('O RA é obrigatório!');
+    //   setStatusError('ra');
+    // }
+    else {
       const resultado = await logar(email, senha);
       if (resultado == 'erro') {
         setStatusError('firebase')
         setMensagemError('Email ou senha não conferem')
       }
       else {
-        cadastro(ra)
+        getAluno()
+        // cadastro(ra)
         navigation.navigate('Principal')
       }
     }
   }
 
+  const getAluno = async () => {
+    const snapshotDisc = await getDocs(collection(db, 'Aluno'))
+    snapshotDisc.docs.forEach(item => {
+        if (email === item.data().email){
+          cadastro(item.data().ra)
+        }
+    }
+    )
+};
   return (
     <View style={estilos.container}>
       <LinearGradient colors={['white', '#1D8989']}
