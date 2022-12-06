@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import Botao from '../../componentes/Botao';
 import { EntradaTexto } from '../../componentes/EntradaTexto';
@@ -6,13 +6,16 @@ import { logar } from '../../servicos/requisicoesFirebase';
 import estilos from './estilos';
 import { Alerta } from '../../componentes/Alerta';
 import { LinearGradient } from 'expo-linear-gradient';
+import { AuthContext } from '../../contexts/auth'
 
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [ra, setRA] = useState('');
   const [statusError, setStatusError] = useState('');
   const [mensagemError, setMensagemError] = useState('');
+  const { user, cadastro } = useContext(AuthContext)
 
   async function realizarLogin() {
     if (email == '') {
@@ -21,13 +24,17 @@ export default function Login({ navigation }) {
     } else if (senha == '') {
       setMensagemError('A senha é obrigatória!');
       setStatusError('senha');
-    } else {
+    } else if (ra == '') {
+      setMensagemError('O RA é obrigatório!');
+      setStatusError('ra');
+    }else {
       const resultado = await logar(email, senha);
       if (resultado == 'erro') {
         setStatusError('firebase')
         setMensagemError('Email ou senha não conferem')
       }
       else {
+        cadastro(ra)
         navigation.navigate('Principal')
       }
     }
@@ -52,6 +59,13 @@ export default function Login({ navigation }) {
         error={statusError == 'senha'}
         messageError={mensagemError}
       />
+      <EntradaTexto
+        label="RA"
+        value={ra}
+        onChangeText={texto => setRA(texto)}
+        error={statusError == 'ra'}
+        messageError={mensagemError}
+      />
 
       <Alerta
         mensagem={mensagemError}
@@ -61,14 +75,16 @@ export default function Login({ navigation }) {
 
       <TouchableOpacity
         style={estilos.botao}
-        onPress={() => realizarLogin()}>
+        onPress={() =>
+          realizarLogin()
+        }>
         <Text>LOGAR</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={estilos.botao}
-        onPress={() => { navigation.navigate('Cadastro') }}> 
+        onPress={() => { navigation.navigate('Cadastro') }}>
         <Text>CADASTRAR USUÁRIO</Text>
       </TouchableOpacity>
-    </View>
+    </View >
   );
 }

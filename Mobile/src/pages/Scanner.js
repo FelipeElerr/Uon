@@ -14,8 +14,8 @@ import { collection, getDocs, setDoc, doc } from 'firebase/firestore'
 export default function Scanner() {
 
     const [vetor, setVetor] = useState([])
-    const { hash, setHash } = useContext(AuthContext)
-    const { raBanco, setRaBanco } = useContext(AuthContext)
+    const { codigo, setQrcode } = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const vetorAula = []
 
     const [hasPermission, setHasPermission] = useState(null),
@@ -44,9 +44,9 @@ export default function Scanner() {
         setY(origin.y)
         setHeight(size.height)
         setWidth(size.width)
-        setHash(data)
+        setQrcode(data)
         getDisciplina()
-        console.log(hash)
+        console.log(codigo)
     }
 
     if (hasPermission === null || hasPermission == false) {
@@ -70,10 +70,10 @@ export default function Scanner() {
                 dados: item.data()
             }
             for (const aula in Chamada.dados) {
-                if (Chamada.dados[aula][0] === hash) {
+                if (Chamada.dados[aula][0] === codigo) {
                     console.log(Chamada.dia, disciplina, aula)
                     vetorAula.push(Chamada.dados[aula])
-                    vetorAula[0].push("200767")
+                    vetorAula[0].push(user.ra)
                     console.log("Vetor aula: ", vetorAula)
                     pushRA(disciplina, Chamada.dia, aula)
                 }

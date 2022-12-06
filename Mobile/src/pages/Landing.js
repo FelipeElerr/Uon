@@ -5,15 +5,10 @@ import { useNavigation } from '@react-navigation/native'
 import  { AuthContext } from '../contexts/auth'
 
 export default function Landing() {
-    const {nome, hash} = useContext(AuthContext)
     const navigation = useNavigation()
     return (
         <View>
-            <Text>
-                Nome: {nome}
-                , Hash: {hash}
-            </Text>
-
+            
             <Button
                 color='#333'
                 title="Login"
