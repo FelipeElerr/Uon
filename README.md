@@ -58,6 +58,7 @@ http://localhost:3000
 Instale o Expo e inicie o servidor Mobile
 ```
 cd ../Mobile
+npm i
 npm add expo
 npx expo start
 ```
