@@ -19,6 +19,7 @@ export default function Login({ navigation }) {
   const [mensagemError, setMensagemError] = useState('');
   const { user, cadastro } = useContext(AuthContext)
 
+  
   async function realizarLogin() {
     if (email == '') {
       setMensagemError('O email é obrigatório!');
@@ -73,13 +74,13 @@ export default function Login({ navigation }) {
         error={statusError == 'senha'}
         messageError={mensagemError}
       />
-      <EntradaTexto
+      {/* <EntradaTexto
         label="RA"
         value={ra}
         onChangeText={texto => setRA(texto)}
         error={statusError == 'ra'}
         messageError={mensagemError}
-      />
+      /> */}
 
       <Alerta
         mensagem={mensagemError}
